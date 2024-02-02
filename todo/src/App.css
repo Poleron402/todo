@@ -1,42 +1,87 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root{
+  --main-text: rgb(124, 93, 163);
+}
+body, html{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(207, 215, 248);
+}
+.navbar{
+  font-size: 30px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-text);
+  border-bottom: 1px solid black;
+}
+.options{
+  font-size: 20px;
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  flex-grow: 1; 
+}
+#lgn{
+  font-size: 20px;
+}
+.options a {
+  margin: 0 10vmin;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.home{
+  display: flex;
+  padding: 20px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.cards{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-grow: 1;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#text_home{
+  color: var(--main-text);
+  font-size: 60px;
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#t1_home{
+  width: 250px;
+  height: 200px;
+  background-color: rgb(172, 81, 163);
+  border-radius: 20px;
+  transition: transform 0.3s cubic-bezier(.6,.25,.71,1.01);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+#t2_home{
+  width: 250px;
+  height: 200px;
+  background-color: rgb(64, 177, 219);
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgb(228, 205, 236);
+  transition: 0.3s cubic-bezier(.6,.25,.71,1.01);
 }
-
-.card {
-  padding: 2em;
+#t1_home h3, #t2_home h3{
+  margin: 8px;
+  font-size: 20px;
+  color: rgb(244, 252, 249);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-
-.read-the-docs {
-  color: #888;
+.emoji_home{
+  font-size: 30px;
+}
+#t1_home:hover{
+  transition: transform 0.3s cubic-bezier(.6,.25,.71,1.01);
+  z-index: 1;
+  transform: translate(-7%, 4%);
+}
+#t2_home:hover{
+  transform: translate(-50%, -50%) scale(1.09);
+  transition: 0.3s cubic-bezier(.6,.25,.71,1.01);
+}
+#t1_home h4, #t2_home h4{
+  color: rgb(215, 235, 227);
+  margin: 8px;
+  font-size: 19px;
 }
