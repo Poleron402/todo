@@ -1,6 +1,38 @@
 :root{
   --main-text: rgb(124, 93, 163);
 }
+@keyframes rockAnimation {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes coolAnimation {
+  0%, 100% {
+    transform: rotate(0deg) translate(-50%, -50%) scale(1.09);
+    transform-origin: top center;
+  }
+  25%{
+    transform: rotate(40deg) translate(-50%, -50%) scale(1.09);
+  }
+  75%{
+    transform: rotate(-10deg) translate(-50%, -50%) scale(1.09);
+  }
+  80%{
+    transform: rotate(8deg) translate(-50%, -50%) scale(1.09);
+  }
+  89%{
+    transform: rotate(-4deg) translate(-50%, -50%) scale(1.09);
+  }
+}
 body, html{
   margin: 0;
   padding: 0;
@@ -72,16 +104,19 @@ body, html{
   font-size: 30px;
 }
 #t1_home:hover{
-  transition: transform 0.3s cubic-bezier(.6,.25,.71,1.01);
+  /* transition: transform 0.3s cubic-bezier(.6,.25,.71,1.01); */
   z-index: 1;
-  transform: translate(-7%, 4%);
+  /* transform: translate(-7%, 4%); */
+  animation: rockAnimation 1s ease-in-out 1; 
 }
 #t2_home:hover{
+  /* transition: 0.3s cubic-bezier(.6,.25,.71,1.01); */
   transform: translate(-50%, -50%) scale(1.09);
-  transition: 0.3s cubic-bezier(.6,.25,.71,1.01);
+  animation: coolAnimation 2s ease-in-out 1;
 }
 #t1_home h4, #t2_home h4{
   color: rgb(215, 235, 227);
   margin: 8px;
   font-size: 19px;
 }
+
