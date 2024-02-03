@@ -1,5 +1,5 @@
 :root{
-  --main-text: rgb(124, 93, 163);
+  --main-text: rgb(172, 76, 169);
 }
 @keyframes rockAnimation {
   0%, 100% {
@@ -17,26 +17,32 @@
 }
 @keyframes coolAnimation {
   0%, 100% {
-    transform: rotate(0deg) translate(-50%, -50%) scale(1.09);
-    transform-origin: top center;
+    transform: rotate(0deg) translate(-50%, -50%);
+    transform-origin: top left;
   }
-  25%{
-    transform: rotate(40deg) translate(-50%, -50%) scale(1.09);
+  30%{
+    transform: rotate(-15deg) translate(-50%, -50%) ;
+    
   }
-  75%{
-    transform: rotate(-10deg) translate(-50%, -50%) scale(1.09);
+  55%{
+    transform: rotate(10deg) translate(-50%, -50%) ;
   }
-  80%{
-    transform: rotate(8deg) translate(-50%, -50%) scale(1.09);
+  68%{
+    transform: rotate(-8deg) translate(-50%, -50%) ;
   }
-  89%{
-    transform: rotate(-4deg) translate(-50%, -50%) scale(1.09);
+  79%{
+    transform: rotate(4deg) translate(-50%, -50%) ;
   }
 }
 body, html{
   margin: 0;
   padding: 0;
-  background-color: rgb(207, 215, 248);
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(148,187,233,1);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%) no-repeat;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family:monospace
 }
 .navbar{
   font-size: 30px;
@@ -44,18 +50,25 @@ body, html{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--main-text);
   border-bottom: 1px solid black;
 }
 .options{
-  font-size: 20px;
+  
   display: flex;
   justify-content: center; /* Center the items horizontally */
   align-items: center; /* Center the items vertically */
   flex-grow: 1; 
 }
-#lgn{
+.lnk{
   font-size: 20px;
+  padding: 10px;
+  color: var(--main-text);
+}
+.lnk:hover{
+  padding: 10px;
+  background-color: rgb(205, 241, 241);
+  border-radius: 20px;
+  color: rgb(64, 177, 219);
 }
 .options a {
   margin: 0 10vmin;
@@ -64,6 +77,11 @@ body, html{
 .home{
   display: flex;
   padding: 20px;
+  
+}
+#title{
+  color: var(--main-text);
+  text-decoration: none;
 }
 .cards{
   display: flex;
@@ -74,9 +92,9 @@ body, html{
 }
 #text_home{
   color: var(--main-text);
-  font-size: 60px;
+  font-size: 75px;
   padding: 20px;
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
 }
 #t1_home{
   width: 250px;
@@ -90,7 +108,7 @@ body, html{
   height: 200px;
   background-color: rgb(64, 177, 219);
   border-radius: 20px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);;
   border: 2px solid rgb(228, 205, 236);
   transition: 0.3s cubic-bezier(.6,.25,.71,1.01);
 }
@@ -110,8 +128,6 @@ body, html{
   animation: rockAnimation 1s ease-in-out 1; 
 }
 #t2_home:hover{
-  /* transition: 0.3s cubic-bezier(.6,.25,.71,1.01); */
-  transform: translate(-50%, -50%) scale(1.09);
   animation: coolAnimation 2s ease-in-out 1;
 }
 #t1_home h4, #t2_home h4{
@@ -119,4 +135,22 @@ body, html{
   margin: 8px;
   font-size: 19px;
 }
+@media only screen and (max-width: 870px) {
 
+  .home{
+    flex-direction: column;
+    justify-content: center;
+  }
+  #text_home{
+    font-size: 4em;
+  }
+  #t1_home, #t2_home{
+    margin-right: 20px;
+    margin-top: 40px;
+    width: 190px;
+    height: fit-content;
+  }
+  #t1_home h3, #t2_home h3{
+    font-size: 15px;
+  }
+}

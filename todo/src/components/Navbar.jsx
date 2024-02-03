@@ -1,13 +1,13 @@
 export default function Navbar(){
     return(
         <>
-            <div class="navbar">
-                <a id = "title">Todo</a>
-                <div class = "options">
-                    <a>Motivate</a>
-                    <a>Why Todo?</a>
-                </div>
-                <a id = "lgn">Register</a>
+            <div className="navbar">
+                <a href="\" id = "title">Todo</a>
+                <div className = "options">
+                    <a href = "#" className='lnk'>Motivate</a>
+                    <a href = "#" className='lnk'>Why Todo?</a>
+                </div >
+                <a href="login"className='lnk' id = "lgn">Login</a>
             </div>
         </>
     )
