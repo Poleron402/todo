@@ -5,7 +5,7 @@ export default function Navbar(){
                 <a href="\" id = "title">Todo</a>
                 <div className = "options">
                     <a href = "#" className='lnk'>Motivate</a>
-                    <a href = "#" className='lnk'>Why Todo?</a>
+                    <a href = "why-todo" className='lnk'>Why Todo?</a>
                 </div >
                 <a href="login"className='lnk' id = "lgn">Login</a>
             </div>

@@ -2,6 +2,7 @@ import {createBrowserRouter} from 'react-router-dom'
 import App from './App'
 import Home from './pages/Home'
 import { Login } from './pages/Login'
+import {TheWhy} from './pages/TheWhy'
 import { Register } from './pages/Register'
 
 
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             {
                 path: 'login',
                 element: <Login/>
+            },
+            {
+                path: 'why-todo',
+                element: <TheWhy/>
             }
         ]
     }
