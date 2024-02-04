@@ -8,6 +8,7 @@ export const Login = () =>{
         e.preventDefault();
         // Do the backend stuff
     }
+    
     return(
         <>
         <div className='lisu'>
@@ -21,7 +22,7 @@ export const Login = () =>{
                     <form onSubmit={(e)=>onSubmitHandler(e)}>
                     <input class = 'auth' placeholder='Email:' onChange={e=>setEmail(e.target.value)}></input>
                     <input type='password' class = 'auth' placeholder='Password:' onChange={e=>setPassword(e.target.value)}></input>
-                    <input type='submit' id='sub'></input>
+                    <input type='submit' id='sub' ></input>
                     </form>
                 </div>
                 
