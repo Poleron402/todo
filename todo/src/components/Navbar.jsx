@@ -1,4 +1,6 @@
-export default function Navbar(){
+
+export default function Navbar({user}){
+    console.log(user)
     return(
         <>
             <div className="navbar">
@@ -7,7 +9,10 @@ export default function Navbar(){
                     <a href = "#" className='lnk'>Motivate</a>
                     <a href = "why-todo" className='lnk'>Why Todo?</a>
                 </div >
-                <a href="login"className='lnk' id = "lgn">Login</a>
+                {user? (<a href="profile"className='lnk' >Profile</a>):
+                (<a href="login"className='lnk' id = "lgn">Login</a>)
+                }
+                
             </div>
         </>
     )

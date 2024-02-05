@@ -12,12 +12,15 @@ function App() {
     if (token){
       api.defaults.headers.common['Authorization'] = `Token ${token}`
       let response = await api.get('user/info/')
-      setUser(response.data)
+      setUser(response.data.username)
     }
   }
+  useEffect(()=>{
+    whoAmI()
+  }, [])
   return (
     <>
-      <Navbar/>
+      <Navbar user={user}/>
       <Outlet context={[user, setUser]}/>
     </>
   )
