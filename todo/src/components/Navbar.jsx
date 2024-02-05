@@ -1,6 +1,6 @@
 
 export default function Navbar({user}){
-    console.log(user)
+
     return(
         <>
             <div className="navbar">

@@ -156,6 +156,11 @@ body, html{
   margin: 8px;
   font-size: 19px;
 }
+button{
+  cursor: pointer;
+  padding: 10px;
+  font-family: monospace;
+}
 @media only screen and (max-width: 870px) {
 
   .home{
@@ -175,3 +180,4 @@ body, html{
     font-size: 15px;
   }
 }
+

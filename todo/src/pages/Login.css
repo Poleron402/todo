@@ -33,7 +33,7 @@
     position: relative;
 }
 #left h1{
-    position: absolute;
+    position:absolute;
     color: rgb(238, 243, 249);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

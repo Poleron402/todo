@@ -7,6 +7,7 @@ import { Register } from './pages/Register'
 import { Profile } from './pages/Profile'
 
 
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <Profile/>
+            },
+            {
+                path: 'register',
+                element: <Register/>
             }
         ]
     }
