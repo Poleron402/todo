@@ -7,12 +7,11 @@ from rest_framework.permissions import IsAuthenticated
 from .models import User
 from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED, HTTP_404_NOT_FOUND
 # Create your views here.
-
+class AuthenticationClasses(APIView):
+    authentication_classes = [TokenAuthentication]
+    permission_classes = [IsAuthenticated]
 class Register(APIView):
     def post(self, request):
-        username = request.data.get('username')
-        email = request.data.get('email')
-        password = request.data.get('password')
         user = User.objects.create_user(**request.data)
         token = Token.objects.create(user = user)
         return Response({
@@ -22,16 +21,14 @@ class Register(APIView):
         }, status=HTTP_201_CREATED)
 class Login(APIView):
     def post(self, request):
-        username = request.data.get('username')
+        username = request.data.get('email')
         password = request.data.get('password')
-        user = authenticate(username = username, password = password)
+        user = authenticate(email = username, password = password)
         if user:
             token, created = Token.objects.get_or_create(user = user)
-            return Response({"token": token.key, "user": user.get_username()}, status = HTTP_200_OK)
+            return Response({"token": token.key, "email": user.get_username(), "username": user.username}, status = HTTP_200_OK)
         return Response("Something went wrong: No such user", HTTP_404_NOT_FOUND)
-class AuthenticationClasses(APIView):
-    authentication_classes = [TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+
 class Logout(AuthenticationClasses):
     def post(self, request):
         request.user.auth_token.delete()

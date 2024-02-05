@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import { Login } from './pages/Login'
 import {TheWhy} from './pages/TheWhy'
 import { Register } from './pages/Register'
+import { Profile } from './pages/Profile'
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: 'why-todo',
                 element: <TheWhy/>
+            },
+            {
+                path: 'profile',
+                element: <Profile/>
             }
         ]
     }
