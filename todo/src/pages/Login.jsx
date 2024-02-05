@@ -1,5 +1,6 @@
 import './Login.css'
 import bg from '../assets/unsplash.jpg'
+import { api } from '../utilities'
 import { useState } from 'react'
 export const Login = () =>{
     const [email, setEmail] = useState('')
@@ -24,6 +25,8 @@ export const Login = () =>{
                     <input type='password' class = 'auth' placeholder='Password:' onChange={e=>setPassword(e.target.value)}></input>
                     <input type='submit' id='sub' ></input>
                     </form>
+                    <p>Havent joined yet?</p>
+                    <a href="#">Sign Up</a>
                 </div>
                 
             </div>
