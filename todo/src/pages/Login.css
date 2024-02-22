@@ -1,0 +1,89 @@
+
+.lisu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.auth_div{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 600px;
+    background-color: rgb(238, 243, 249);
+    border-radius: 20px;
+    box-sizing: border-box;
+
+}
+#left{
+    height: inherit;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login_bg{
+    height: inherit;
+    width: 100%; /* Set width to 100% to fill the entire #left container */
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 5px rgb(238, 243, 249) solid;
+    box-sizing: border-box;
+    position: relative;
+}
+#left h1{
+    position:absolute;
+    color: rgb(238, 243, 249);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    padding-top: 40px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    width: 100%;
+}
+h1{
+    color: rgb(172, 76, 169);
+}
+.auth, #sub{
+    font-family:monospace;
+    padding-block: 10px;
+    margin: 10px;
+    outline: none;
+    width: 80%;
+    border-radius: 15px;
+    border: 3px solid rgba(238,174,202,1);
+    transition: border-color 0.3s ease;
+}
+.auth:focus{
+    border-color: rgb(174, 229, 238);
+}
+#sub{
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+#sub:active{
+    border-color: rgb(174, 229, 238);
+}
+#sub:hover{
+    background-color: rgb(248, 245, 245);
+}
+
+@media only screen and (max-width: 750px) {
+    #left{
+        all: unset;
+        display: none;
+    }
+    #right{
+        width: 100%;
+    }
+}
